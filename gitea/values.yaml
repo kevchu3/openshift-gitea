@@ -1,0 +1,24 @@
+redis-cluster:
+  enabled: false
+postgresql:
+  enabled: true
+postgresql-ha:
+  enabled: false
+
+persistence:
+  enabled: true
+  size: 10Gi
+
+gitea:
+  config:
+    database:
+      DB_TYPE: postgres
+    session:
+      PROVIDER: db
+    cache:
+      ADAPTER: memory
+    queue:
+      TYPE: level
+    indexer:
+      ISSUE_INDEXER_TYPE: bleve
+      REPO_INDEXER_ENABLED: true
